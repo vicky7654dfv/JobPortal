@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Job Portal Sign Up</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="loader-img">
+            <p>Loading Experience...</p>
+        </div>
+    </div>
+
+    <div class="page-bg">
+        <video src="../assets/SignUp/signupVid.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay-gradient"></div>
+    </div>
+
+    <a href="../index.html" class="return-home-btn fade-in">
+        <i class="fa-solid fa-arrow-left"></i> Home
+    </a>
+
+    <div class="page-wrapper">
+        <div class="page-heading fade-in">
+            <h1>Create Your Profile</h1>
+            <p>"Your next great career move starts here."</p>
+        </div>
+
+        <div class="signup-container fade-in-up">
+
+            <div class="split-left">
+                <div class="left-content">
+                    <a href="../index.html">
+                        <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="brand-logo">
+                    </a>
+                    <h2>Welcome to Stackly</h2>
+                    <p>Join millions of professionals. Discover tailored job opportunities, connect with top employers,
+                        and build your career footprint.</p>
+                </div>
+            </div>
+
+            <div class="split-right">
+                <form id="signup-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user input-icon"></i>
+                            <input type="text" id="fullname" name="fullname" placeholder="John Doe" autocomplete="name">
+                        </div>
+                        <span class="error-msg" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profession">Profession</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-briefcase input-icon"></i>
+                            <select id="profession" name="profession" class="custom-select">
+                                <option value="" disabled selected>Select Experience</option>
+                                <option value="fresher">Fresher</option>
+                                <option value="experienced">Experienced</option>
+                            </select>
+                        </div>
+                        <span class="error-msg" id="profession-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope input-icon"></i>
+                            <input type="email" id="email" name="email" placeholder="career@example.com"
+                                autocomplete="email">
+                        </div>
+                        <span class="error-msg" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone input-icon"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="9876543210" autocomplete="tel"
+                                maxlength="10">
+                        </div>
+                        <span class="error-msg" id="phone-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" id="password" name="password" placeholder="Strong password"
+                                autocomplete="new-password">
+                            <button type="button" class="eye-btn" aria-label="Toggle password visibility"><i
+                                    class="fa-solid fa-eye"></i></button>
+                        </div>
+                        <span class="error-msg" id="password-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-check-double input-icon"></i>
+                            <input type="password" id="confirm-password" name="confirm-password"
+                                placeholder="Repeat password" autocomplete="new-password">
+                            <button type="button" class="eye-btn" aria-label="Toggle confirm password visibility"><i
+                                    class="fa-solid fa-eye"></i></button>
+                        </div>
+                        <span class="error-msg" id="confirm-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-glow full-width">Register</button>
+
+                    <div class="auth-links">
+                        <span>Already have an account?</span>
+                        <a href="login.html" class="login-link">Login here</a>
+                    </div>
+
+                    <div class="social-auth">
+                        <div class="divider">
+                            <span>Or sign up with</span>
+                        </div>
+                        <div class="social-btns">
+                            <a href="error.html" class="social-btn google-btn" aria-label="Sign up with Google"><i
+                                    class="fa-brands fa-google"></i></a>
+                            <a href="error.html" class="social-btn linkedin-btn" aria-label="Sign up with LinkedIn"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="error.html" class="social-btn github-btn" aria-label="Sign up with GitHub"><i
+                                    class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <p class="footer-para fade-in-up" style="animation-delay: 0.6s;">
+            By clicking "Register," you agree to Stackly's Terms of Service and Privacy Policy. We are committed to
+            protecting your professional data. Let's start building your future today.
+        </p>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 300);
+                }
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript')) {
+                    e.preventDefault();
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+
+        const form = document.getElementById('signup-form');
+        const fullName = document.getElementById('fullname');
+        const profession = document.getElementById('profession');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+
+        const nameError = document.getElementById('name-error');
+        const professionError = document.getElementById('profession-error');
+        const emailError = document.getElementById('email-error');
+        const phoneError = document.getElementById('phone-error');
+        const passwordError = document.getElementById('password-error');
+        const confirmError = document.getElementById('confirm-error');
+
+        fullName.addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+        });
+
+        phone.addEventListener('input', function (e) {
+            this.value = this.value.replace(/\D/g, '').substring(0, 10);
+        });
+
+        const isValidEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        const isStrongPassword = (password) => {
+            const re = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return re.test(password);
+        };
+
+        const eyeBtns = document.querySelectorAll('.eye-btn');
+        eyeBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const input = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        const clearErrors = () => {
+            nameError.innerText = '';
+            professionError.innerText = '';
+            emailError.innerText = '';
+            phoneError.innerText = '';
+            passwordError.innerText = '';
+            confirmError.innerText = '';
+            document.querySelectorAll('.input-wrapper').forEach(wrapper => {
+                wrapper.classList.remove('error-border');
+            });
+        };
+
+        const showError = (element, errorSpan, message) => {
+            errorSpan.innerText = message;
+            element.parentElement.classList.add('error-border');
+        };
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            clearErrors();
+            let isFormValid = true;
+
+            if (fullName.value.trim() === '') {
+                showError(fullName, nameError, 'Full name is required');
+                isFormValid = false;
+            }
+
+            if (profession.value === '') {
+                showError(profession, professionError, 'Profession is required');
+                isFormValid = false;
+            }
+
+            if (email.value.trim() === '') {
+                showError(email, emailError, 'Email is required');
+                isFormValid = false;
+            } else if (!isValidEmail(email.value.trim())) {
+                showError(email, emailError, 'Please enter a valid email address');
+                isFormValid = false;
+            }
+
+            if (phone.value === '') {
+                showError(phone, phoneError, 'Phone number is required');
+                isFormValid = false;
+            } else if (phone.value.length !== 10) {
+                showError(phone, phoneError, 'Phone number must be exactly 10 digits');
+                isFormValid = false;
+            }
+
+            if (password.value === '') {
+                showError(password, passwordError, 'Password is required');
+                isFormValid = false;
+            } else if (!isStrongPassword(password.value)) {
+                showError(password, passwordError, 'Must be 8+ chars, contain 1 uppercase, 1 number, & 1 special char');
+                isFormValid = false;
+            }
+
+            if (confirmPassword.value === '') {
+                ror(confirmPassword, confirmError, 'Please confirm your password');
+                isFormValid = false;
+            } else if (password.value !== confirmPassword.value) {
+                showError(confirmPassword, confirmError, 'Passwords do not match');
+                isFormValid = false;
+            }
+
+            if (isFormValid) {
+                const loader = document.getElementById('page-loader');
+                loader.style.display = 'flex';
+                setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                setTimeout(() => { window.location.href = 'error.html'; }, 400);
+            }
+        });
+    </script>
+</body>
+
+</html>
