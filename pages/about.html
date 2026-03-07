@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | About Us</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="loader-img">
+            <p>Loading the Future...</p>
+        </div>
+    </div>
+
+    <header class="headerWrap" id="main-header">
+        <div class="imgWrap">
+            <a href="../index.html">
+                <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="site-logo">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="linksWrap" id="nav-links">
+            <div class="topCloseBtn" id="close-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <ul>
+                <li class="dropdown" id="home-dropdown">
+                    <div class="dropdownHeader">
+                        <a href="javascript:void(0)" class="homePageLink" id="home-nav-link">Home</a>
+                        <button class="dropdownToggle" aria-label="Toggle dropdown" id="dropdown-toggle-btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdownMenu" id="dropdown-menu">
+                        <li><a href="../index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" style="color: var(--accent-color);">About Us</a></li>
+                <li><a href="dashboard.html">DashBoard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="theme-toggle-li">
+                    <button id="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-sun" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menuOverlay" id="menu-overlay"></div>
+    </header>
+
+    <main>
+        <section class="about-hero fade-in" id="hero-section">
+            <div class="hero-interactive-bg">
+                <canvas id="hero-canvas"></canvas>
+                <div class="cursor-follower" id="cursor-follower"></div>
+                <div class="floating-orbs">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                </div>
+            </div>
+            <div class="container hero-container center-aligned">
+                <h1 class="hero-title fade-in-up">Elevate Your Career</h1>
+                <h1 class="hero-title highlight fade-in-up" style="animation-delay: 0.2s;">at Every Level.</h1>
+                <p class="hero-subtitle fade-in-up" style="animation-delay: 0.4s;">We don't just find jobs. We engineer trajectories for the boldest minds in the industry.</p>
+                <div class="hero-btn-group fade-in-up" style="animation-delay: 0.6s;">
+                    <button class="btn btn-glow" onclick="location.href='error.html'">Discover More</button>
+                    <button class="btn btn-outline" onclick="location.href='error.html'">Join The Orbit</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <h2>Meet The Architects</h2>
+                    <p>The visionaries behind your next career breakthrough.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="../assets/Home1/Grid/1.webp" alt="Eleanor Vance">
+                            <div class="team-socials">
+                                <a href="error.html" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="error.html" aria-label="Twitter Profile"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h3>Eleanor Vance</h3>
+                        <p class="team-role">CEO & Founder</p>
+                        <p class="team-bio">Leading the vision for a borderless job market, Eleanor specializes in strategic growth and high-level enterprise talent acquisition.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="../assets/Home1/Grid/2.webp" alt="Marcus Reed">
+                            <div class="team-socials">
+                                <a href="error.html" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="error.html" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Marcus Reed</h3>
+                        <p class="team-role">Head of Product</p>
+                        <p class="team-bio">Architecting intuitive digital experiences that simplify the recruitment process for both candidates and global hiring managers.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="../assets/Home1/Grid/11.webp" alt="Sophia Lin">
+                            <div class="team-socials">
+                                <a href="error.html" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="error.html" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Sophia Lin</h3>
+                        <p class="team-role">CTO</p>
+                        <p class="team-bio">Pioneering the AI-driven matching algorithms that power our platform, ensuring precision and objectivity in every placement.</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="../assets/Home1/Grid/7.webp" alt="David Kim">
+                            <div class="team-socials">
+                                <a href="error.html" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="error.html" aria-label="Twitter Profile"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <h3>David Kim</h3>
+                        <p class="team-role">Lead Strategist</p>
+                        <p class="team-bio">Analyzing global labor market shifts to provide our users with unmatched career data and strategic employment insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="placement-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <h2>Elite Track Placements</h2>
+                    <p>Accelerating careers into the world's most innovative MNCs.</p>
+                </div>
+
+                <div class="road-wrapper">
+                    <div class="student-cutout cutout-1">
+                        <img src="../assets/About/1.webp" alt="Student">
+                        <div class="data-badge">98th Percentile</div>
+                        <div class="cutout-data">
+                            <h4>Placed at Google</h4>
+                            <p>Software Engineering Focus</p>
+                            <div class="placement-stats">
+                                <div class="stat-item"><span>4.9/5</span><span class="stat-label">Reviews</span></div>
+                                <div class="stat-item"><span>120%</span><span class="stat-label">Hike</span></div>
+                            </div>
+                            <button class="btn btn-outline btn-sm mt-2 full-width" onclick="location.href='error.html'">Success Story</button>
+                        </div>
+                    </div>
+
+                    <div class="student-cutout cutout-2">
+                        <img src="../assets/About/2.webp" alt="Student">
+                        <div class="data-badge">Top Tier AI</div>
+                        <div class="cutout-data">
+                            <h4>Placed at NVIDIA</h4>
+                            <p>Fullstack Specialist</p>
+                            <div class="placement-stats">
+                                <div class="stat-item"><span>5.0/5</span><span class="stat-label">Reviews</span></div>
+                                <div class="stat-item"><span>150%</span><span class="stat-label">Hike</span></div>
+                            </div>
+                            <button class="btn btn-outline btn-sm mt-2 full-width" onclick="location.href='error.html'">Success Story</button>
+                        </div>
+                    </div>
+
+                    <div class="student-cutout cutout-3">
+                        <img src="../assets/About/3.webp" alt="Student">
+                        <div class="data-badge">MNC Elite</div>
+                        <div class="cutout-data">
+                            <h4>Placed at Microsoft</h4>
+                            <p>Data Infrastructure</p>
+                            <div class="placement-stats">
+                                <div class="stat-item"><span>4.8/5</span><span class="stat-label">Reviews</span></div>
+                                <div class="stat-item"><span>110%</span><span class="stat-label">Hike</span></div>
+                            </div>
+                            <button class="btn btn-outline btn-sm mt-2 full-width" onclick="location.href='error.html'">Success Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-mission-section fade-in">
+            <video id="about-vid" src="../assets/About/heroAbout.mp4" loop playsinline></video>
+            <div class="video-overlay">
+                <div class="container vm-grid">
+                    <div class="vm-box glass-panel">
+                        <h2>Our Vision</h2>
+                        <p>To architect a global ecosystem where elite talent effortlessly bridges with transformative opportunities, redefining the future of enterprise across industries.</p>
+                        <button style="border-color: rgba(255, 255, 255); color: #00b890;" class="btn btn-outline btn-sm mt-2" onclick="location.href='error.html'">Learn More</button>
+                    </div>
+                    
+                    <div class="play-btn-wrapper">
+                        <button id="play-btn" class="pulse-play" aria-label="Toggle Video Playback">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+
+                    <div class="vm-box glass-panel">
+                        <h2>Our Mission</h2>
+                        <p>Deploying advanced AI models and human-centric career strategies to dissolve recruitment barriers, ensuring faster placement and sustainable professional growth.</p>
+                        <button style="border-color: rgba(255, 255, 255); color: #00b890;" class="btn btn-outline btn-sm mt-2" onclick="location.href='error.html'">Our Strategy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-testimonial-section fade-in">
+            <div class="container ht-split">
+                <div class="history-block">
+                    <h2>Our Evolution</h2>
+                    <p class="history-text">Founded in 2018, Stackly emerged as a boutique recruitment firm. Today, we stand as a global powerhouse, processing millions of career trajectories with precision-engineered AI and human matching.</p>
+                    <div class="history-img-box">
+                        <img src="../assets/About/bgCom.webp" alt="Stackly Heritage">
+                        <div class="history-hover-btn">
+                            <button class="btn btn-glow btn-sm" onclick="location.href='error.html'">View Our Timeline</button>
+                        </div>
+                        <div style="color: #00b890;" class="img-overlay-text">The Ground Zero • 2018</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-block">
+                    <h2>Global Voice</h2>
+                    
+                    <div class="testimonial-slider" id="testimonial-slider">
+                        <div class="testi-slide active">
+                            <i class="fa-solid fa-quote-right quote-icon"></i>
+                            <p class="review-text">"The AI-driven insights on Stackly didn't just find me a job; they helped me identify a career path I hadn't even considered. Truly transformative."</p>
+                            <div class="testi-author">
+                                <div class="author-info">
+                                    <h4>Alexander Thorne</h4>
+                                    <p>Senior Dev at Google</p>
+                                </div>
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div class="testi-slide">
+                            <i class="fa-solid fa-quote-right quote-icon"></i>
+                            <p class="review-text">"Bypassing the traditional ATS black hole was the best thing for my career. Direct recruiter matching is the future of recruitment."</p>
+                            <div class="testi-author">
+                                <div class="author-info">
+                                    <h4>Maya Patel</h4>
+                                    <p>Product Manager at NVIDIA</p>
+                                </div>
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div class="testi-slide">
+                            <i class="fa-solid fa-quote-right quote-icon"></i>
+                            <p class="review-text">"Salary transparency and negotiation tools gave me the confidence to secure a package 40% higher than my previous role."</p>
+                            <div class="testi-author">
+                                <div class="author-info">
+                                    <h4>Liam O'Brian</h4>
+                                    <p>Data Architect at Microsoft</p>
+                                </div>
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerWrap container">
+            <div class="box">
+                <div class="logoContainer">
+                    <div class="logo">
+                        <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="footer-logo site-logo">
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Defining the future of recruitment with precision, passion, and unparalleled expertise. We are
+                    committed to connecting elite talent with top-tier companies.
+                </p>
+            </div>
+
+            <div class="box">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="error.html">Job Search</a></li>
+                    <li><a href="error.html">Resume Builder</a></li>
+                    <li><a href="error.html">Career Advice</a></li>
+                    <li><a href="error.html">Employer Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Contact</h4>
+                <ul class="contactInfo">
+                    <li><i class="fa-solid fa-location-dot"></i><span> Bangalore, IN</span></li>
+                    <li><i class="fa-solid fa-phone"></i> +91 1800 555 0199</li>
+                    <li><i class="fa-solid fa-envelope"></i> careers@stackly.com</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Newsletter</h4>
+                <p>Join our exclusive mailing list for updates.</p>
+                <form id="footer-newsletter-form" class="subscribe-form" novalidate>
+                    <span class="sr-only">Newsletter Email</span>
+                    <input type="email" id="footer-email" name="footer-email" placeholder="Your Email"
+                        autocomplete="email" aria-label="Subscribe to our newsletter">
+                    <span id="newsletter-error"
+                        style="color: var(--text-main); font-size: 0.8rem; display: block; margin-top: -5px; min-height: 15px;"></span>
+                    <button type="submit" class="btn btn-glow full-width">Subscribe</button>
+                </form>
+                <div class="media">
+                    <a href="error.html" class="socialLink" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // Core Scripts
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 300);
+                }
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript') && !href.startsWith('http')) {
+                    e.preventDefault();
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const dropdownToggleBtn = document.getElementById('dropdown-toggle-btn');
+        const homeNavLink = document.getElementById('home-nav-link');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const body = document.body;
+
+        function openMenu() {
+            navLinks.classList.add('showMenu');
+            menuOverlay.style.display = 'block';
+            body.classList.add('menu-open');
+        }
+        function closeMenu() {
+            navLinks.classList.remove('showMenu');
+            menuOverlay.style.display = 'none';
+            body.classList.remove('menu-open');
+            dropdownMenu.classList.remove('showDropdown');
+        }
+
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navLinks.classList.contains('showMenu')) { closeMenu(); }
+            else { openMenu(); }
+        });
+        closeBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('showMenu') && !navLinks.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        dropdownToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('showDropdown');
+        });
+        homeNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('showDropdown');
+            }
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('stackly-theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('stackly-theme', 'dark');
+            }
+        });
+
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { header.classList.add('sticky'); }
+            else { header.classList.remove('sticky'); }
+        });
+
+        const fadeElems = document.querySelectorAll('.fade-in, .fade-in-up');
+        const fadeInObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElems.forEach(elem => fadeInObserver.observe(elem));
+
+        // Newsletter Logic
+        const footerForm = document.getElementById('footer-newsletter-form');
+        const newsletterEmail = document.getElementById('footer-email');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        const isValidNewsletterEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        if(footerForm){
+            footerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                newsletterError.innerText = '';
+                newsletterEmail.style.borderColor = '';
+
+                if (newsletterEmail.value.trim() === '') {
+                    newsletterError.innerText = 'Email is required';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else if (!isValidNewsletterEmail(newsletterEmail.value.trim())) {
+                    newsletterError.innerText = 'Please enter a valid email address';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else {
+                    alert("Successfully subscribed to the newsletter!");
+                    newsletterEmail.value = '';
+                }
+            });
+        }
+
+        const scrollTopBtnElement = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { scrollTopBtnElement.classList.add("show"); } 
+            else { scrollTopBtnElement.classList.remove("show"); }
+        });
+        scrollTopBtnElement.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // About Page Specific Scripts
+        // Cursor Tracking for Hero
+        const heroSection = document.getElementById('hero-section');
+        const sunFollower = document.getElementById('cursor-follower');
+        if(heroSection && sunFollower) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                sunFollower.style.left = `${x}px`;
+                sunFollower.style.top = `${y}px`;
+            });
+        }
+
+        // Video Play/Pause Logic (Expanded later)
+        const aboutVid = document.getElementById('about-vid');
+        const playBtn = document.getElementById('play-btn');
+        if(aboutVid && playBtn) {
+            const playIcon = playBtn.querySelector('i');
+            playBtn.addEventListener('click', () => {
+                if (aboutVid.paused) {
+                    aboutVid.play();
+                    playIcon.classList.replace('fa-play', 'fa-pause');
+                } else {
+                    aboutVid.pause();
+                    playIcon.classList.replace('fa-pause', 'fa-play');
+                }
+            });
+        }
+
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testi-slide');
+        let currentTesti = 0;
+        if(testimonials.length > 0) {
+            setInterval(() => {
+                testimonials[currentTesti].classList.remove('active');
+                currentTesti = (currentTesti + 1) % testimonials.length;
+                testimonials[currentTesti].classList.add('active');
+            }, 4000); // 4 seconds transition
+        }
+
+        // Dotted Background Logic
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let points = [];
+        const spacing = 30;
+        const mouse = { x: -1000, y: -1000, radius: 150 };
+
+        function resizeCanvas() {
+            if (!heroSection || !canvas) return;
+            canvas.width = heroSection.offsetWidth;
+            canvas.height = heroSection.offsetHeight;
+            initPoints();
+        }
+
+        function initPoints() {
+            points = [];
+            for (let x = spacing / 2; x < canvas.width; x += spacing) {
+                for (let y = spacing / 2; y < canvas.height; y += spacing) {
+                    points.push({ x, y, originalX: x, originalY: y });
+                }
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            points.forEach(p => {
+                const dx = mouse.x - p.x;
+                const dy = mouse.y - p.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                let renderX = p.x;
+                let renderY = p.y;
+                let size = 1.5;
+
+                if (dist < mouse.radius) {
+                    const force = (mouse.radius - dist) / mouse.radius;
+                    renderX -= dx * force * 0.4;
+                    renderY -= dy * force * 0.4;
+                    size = 1.5 + force * 2;
+                    ctx.fillStyle = document.body.classList.contains('light-theme') 
+                        ? `rgba(79, 70, 229, ${0.1 + force * 0.4})` 
+                        : `rgba(99, 102, 241, ${0.2 + force * 0.5})`;
+                } else {
+                    ctx.fillStyle = document.body.classList.contains('light-theme') ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.1)';
+                }
+
+                ctx.beginPath();
+                ctx.arc(renderX, renderY, size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+
+        if (heroSection && canvas) {
+            window.addEventListener('resize', resizeCanvas);
+            heroSection.addEventListener('mousemove', (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                mouse.x = -1000;
+                mouse.y = -1000;
+            });
+            resizeCanvas();
+            animateCanvas();
+        }
+    </script>
+</body>
+</html>
