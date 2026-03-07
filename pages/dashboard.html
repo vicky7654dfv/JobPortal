@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Recruiter ATS Dashboard</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <nav class="dash-topbar">
+        <div class="dash-logo">
+            <a href="../index.html">
+                <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="site-logo">
+            </a>
+        </div>
+        
+        <div class="dash-actions">
+            <button id="theme-toggle-btn" class="btn-dash outline-glow" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i> Theme
+            </button>
+            <a href="../index.html" class="btn-dash exit-btn">Exit Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="dash-container">
+        
+        <div class="dashboard-header-area">
+            <div class="header-title-row">
+                <h1 class="page-title">Recruitment <span class="text-gradient">Hub</span></h1>
+                <p class="subtitle">Monitor pipelines, evaluate talent, and manage active requisitions.</p>
+            </div>
+            
+            <div class="dash-tabs" id="dash-tabs">
+                <button class="tab-btn active" data-target="analytics">Analytics</button>
+                <button class="tab-btn" data-target="postings">Job Postings</button>
+                <button class="tab-btn" data-target="candidates">Candidates</button>
+                <button class="tab-btn" data-target="messages">Inbox</button>
+            </div>
+        </div>
+
+        <section id="analytics" class="dash-section active fade-in">
+            
+            <div class="section-header-flex">
+                <div class="section-text">
+                    <h2>Pipeline Overview</h2>
+                </div>
+                <button class="btn-dash outline-glow" onclick="location.href='error.html'">Export Report</button>
+            </div>
+
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Total Applications</span>
+                        <h3>1,482</h3>
+                        <p class="trend up"><i class="fa-solid fa-arrow-trend-up"></i> Up 18% this quarter</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Active Roles</span>
+                        <h3>24</h3>
+                        <p class="trend neutral"><i class="fa-solid fa-minus"></i> Steady pipeline</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Interviews Set</span>
+                        <h3>45</h3>
+                        <p class="trend up"><i class="fa-solid fa-arrow-trend-up"></i> Up 12% this week</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-details">
+                        <span class="stat-label">Offers Pending</span>
+                        <h3>12</h3>
+                        <p class="trend action-req"><i class="fa-solid fa-circle-exclamation"></i> 3 require followup</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-box main-chart">
+                    <div class="box-header">
+                        <h3>Applicant Sources (Ring Distribution)</h3>
+                        <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+                    </div>
+                    <div class="canvas-container ring-chart-wrapper">
+                        <canvas id="sourceRingChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-box">
+                    <div class="box-header">
+                        <h3>Applicants by Department</h3>
+                        <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="deptChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-grid custom-bars-grid">
+                <div class="chart-box timeline-box">
+                    <div class="box-header">
+                        <h3>Live ATS Activity</h3>
+                        <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+                    </div>
+                    <div class="timeline-widget">
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-success"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-time">10 Minutes Ago</p>
+                                <p class="timeline-text"><strong>Michael Chang</strong> accepted the offer for <span>Senior DevOps Engineer</span>.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-info"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-time">1 Hour Ago</p>
+                                <p class="timeline-text"><strong>Sarah Jenkins</strong> submitted a new application for <span>Staff Data Scientist</span>.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-warn"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-time">3 Hours Ago</p>
+                                <p class="timeline-text">Interview scheduled: <strong>Diana Vance</strong> with VP of Engineering.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-primary"></div>
+                            <div class="timeline-content">
+                                <p class="timeline-time">Yesterday, 4:30 PM</p>
+                                <p class="timeline-text">New requisition published: <span>VP of Marketing (Remote)</span> to LinkedIn and Indeed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-box alert-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div class="box-header">
+                            <h3>Hiring Target Fulfillment</h3>
+                            <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+                        </div>
+                        <div class="horizontal-bars">
+                            <div class="h-bar-item">
+                                <div class="h-bar-info"><span>Engineering Roles</span><span>85%</span></div>
+                                <div class="h-bar-track"><div class="h-bar-fill" style="width: 85%; background: var(--accent-color);"></div></div>
+                            </div>
+                            <div class="h-bar-item">
+                                <div class="h-bar-info"><span>Sales & Marketing</span><span>40%</span></div>
+                                <div class="h-bar-track"><div class="h-bar-fill" style="width: 40%; background: #38bdf8;"></div></div>
+                            </div>
+                            <div class="h-bar-item">
+                                <div class="h-bar-info"><span>Product & Design</span><span>65%</span></div>
+                                <div class="h-bar-track"><div class="h-bar-fill" style="width: 65%; background: #a855f7;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="system-status-wrapper">
+                        <ul class="system-list">
+                            <li><span class="status-indicator ok"></span> ATS Integration Online</li>
+                            <li><span class="status-indicator ok"></span> Job Board Sync Active</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="postings" class="dash-section fade-in">
+            <div class="section-header-flex">
+                <div class="section-text">
+                    <h2>Active Requisitions</h2>
+                </div>
+                <button class="btn-dash" onclick="location.href='error.html'">Post New Job</button>
+            </div>
+
+            <div class="modern-job-list creative-widget">
+                <div class="list-header">
+                    <h3>Current Listings</h3>
+                    <button class="btn-dash outline-glow" onclick="location.href='error.html'">View Archives</button>
+                </div>
+                
+                <div class="job-card-rows">
+                    <div class="job-row">
+                        <div class="job-main-info">
+                            <h4>Senior React Developer</h4>
+                            <span>#ENG-092 • Remote</span>
+                        </div>
+                        <div class="job-dept">Engineering</div>
+                        <div class="job-stats"><i class="fa-solid fa-users"></i> 145 Applicants</div>
+                        <div class="job-status"><span class="badge badge-progress">Sourcing</span></div>
+                        <div class="job-action"><button class="btn-dash" onclick="location.href='error.html'">Review</button></div>
+                    </div>
+                    <div class="job-row">
+                        <div class="job-main-info">
+                            <h4>VP of Marketing</h4>
+                            <span>#MKT-104 • New York, NY</span>
+                        </div>
+                        <div class="job-dept">Marketing</div>
+                        <div class="job-stats"><i class="fa-solid fa-users"></i> 89 Applicants</div>
+                        <div class="job-status"><span class="badge badge-pending">Interviewing</span></div>
+                        <div class="job-action"><button class="btn-dash outline-glow" onclick="location.href='error.html'">Manage</button></div>
+                    </div>
+                    <div class="job-row">
+                        <div class="job-main-info">
+                            <h4>Senior UX Researcher</h4>
+                            <span>#DES-044 • London, UK</span>
+                        </div>
+                        <div class="job-dept">Design</div>
+                        <div class="job-stats"><i class="fa-solid fa-users"></i> 312 Applicants</div>
+                        <div class="job-status"><span class="badge badge-progress">Sourcing</span></div>
+                        <div class="job-action"><button class="btn-dash" onclick="location.href='error.html'">Review</button></div>
+                    </div>
+                    <div class="job-row">
+                        <div class="job-main-info">
+                            <h4>Payroll Manager</h4>
+                            <span>#FIN-012 • Chicago, IL</span>
+                        </div>
+                        <div class="job-dept">Finance</div>
+                        <div class="job-stats"><i class="fa-solid fa-users"></i> 45 Applicants</div>
+                        <div class="job-status"><span class="badge badge-completed">Offer Accepted</span></div>
+                        <div class="job-action"><button class="btn-dash outline-glow" style="border-color: var(--success-color); color: var(--success-color);" onclick="location.href='error.html'">Close</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="candidates" class="dash-section fade-in">
+            <div class="candidates-layout">
+                
+                <aside class="dash-sidebar creative-widget">
+                    <div class="sidebar-header">
+                        <h2>Candidates</h2>
+                        <span class="candidate-count">6 Active</span>
+                    </div>
+
+                    <div class="sidebar-search">
+                        <label for="candidate-search" class="sr-only">Search candidates</label>
+                        <input type="text" id="candidate-search" name="candidate-search" placeholder="Search candidates..." class="dash-input">
+                    </div>
+
+                    <div class="candidate-list" id="sidebar-candidate-list">
+                        </div>
+                </aside>
+
+                <div class="candidate-detail-main">
+                    <header class="dash-main-header">
+                        <div class="header-breadcrumb">
+                            Talent Pool / <strong id="bc-name">Eleanor Davis</strong>
+                        </div>
+                        <div class="header-actions">
+                            <button class="btn-dash outline-glow" onclick="location.href='error.html'">Download CV</button>
+                            <button class="btn-dash" onclick="location.href='error.html'">Advance Stage</button>
+                        </div>
+                    </header>
+
+                    <div class="org-grid">
+                        
+                        <div class="org-widget profile-widget" id="active-profile-widget">
+                            <div class="profile-header">
+                                <div class="profile-photo-container" id="p-avatar-container">
+                                    </div>
+                                <div class="profile-title">
+                                    <h3 id="p-name">Eleanor Davis</h3>
+                                    <span class="badge badge-progress" id="p-status">Technical Review</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-details-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Current Role</span>
+                                    <span class="detail-value" id="p-role">Senior Product Designer</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Experience</span>
+                                    <span class="detail-value" id="p-exp">8+ Years</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value" id="p-email">e.davis@design.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value" id="p-phone">+1 (555) 012-3456</span>
+                                </div>
+                            </div>
+
+                            <div class="profile-tab-content">
+                                <h4 style="margin-bottom: 10px; color: var(--text-main); font-size: 1rem;">Candidate Summary</h4>
+                                <p id="p-bio">Passionate about creating human-centric digital experiences. Specialist in design systems and accessibility.</p>
+                                <button class="btn-dash outline-glow full-width mt-3" onclick="location.href='error.html'" style="margin-top: 20px;">Access Complete Data</button>
+                            </div>
+                        </div>
+
+                        <div class="org-widget ring-widget">
+                            <div class="widget-head">
+                                <h3>Overall Match</h3>
+                                <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+                            </div>
+                            
+                            <div class="ring-container">
+                                <div class="css-ring" style="--percentage: 85;" id="match-ring">
+                                    <div class="ring-inner">
+                                        <span class="ring-value" id="match-value">85%</span>
+                                        <span class="ring-label">Role Fit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sub-skills-area">
+                                <div class="skill-item">
+                                    <div class="s-info"><span>Technical Skills</span><span id="skill-1-val">90%</span></div>
+                                    <div class="s-bar"><div class="s-fill bg-success" id="skill-1-fill" style="width: 90%;"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="s-info"><span>Culture Fit</span><span id="skill-2-val">80%</span></div>
+                                    <div class="s-bar"><div class="s-fill bg-warn" id="skill-2-fill" style="width: 80%;"></div></div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="s-info"><span>Communication</span><span id="skill-3-val">95%</span></div>
+                                    <div class="s-bar"><div class="s-fill" id="skill-3-fill" style="width: 95%; background: var(--accent-color);"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="org-widget tasks-widget">
+                            <div class="widget-head">
+                                <h3>Evaluation Checkpoints</h3>
+                                <button class="btn-dash outline-glow" style="padding: 8px 15px; font-size: 0.75rem;" onclick="location.href='error.html'">Add Task</button>
+                            </div>
+                            <div class="task-list">
+                                <div class="task-item">
+                                    <div class="task-icon done"><i class="fa-solid fa-check"></i></div>
+                                    <div class="task-info">
+                                        <h4>Initial Phone Screen</h4>
+                                        <span>Completed • Passed</span>
+                                    </div>
+                                </div>
+                                <div class="task-item active">
+                                    <div class="task-icon pending"><i class="fa-solid fa-bolt"></i></div>
+                                    <div class="task-info">
+                                        <h4>Technical Assessment</h4>
+                                        <span>Awaiting submission</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="org-widget full-width-widget mt-4" style="margin-top: 25px;">
+                        <div class="widget-head">
+                            <h3>Application Journey</h3>
+                        </div>
+                        <div class="dot-flow-container" id="app-flow-container">
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="messages" class="dash-section fade-in">
+            <div class="section-header-flex">
+                <div class="section-text">
+                    <h2>Applicant Inbox</h2>
+                </div>
+                <button class="btn-dash" onclick="location.href='error.html'">Compose Email</button>
+            </div>
+
+            <div class="messages-layout">
+                <div class="message-list creative-widget" id="message-list-container">
+                    </div>
+
+                <div class="message-view creative-widget">
+                    <div class="msg-view-header">
+                        <div>
+                            <h3 id="view-msg-name">Loading...</h3>
+                            <span id="view-msg-email">...</span>
+                        </div>
+                        <div class="msg-actions">
+                            <span id="view-msg-date" class="msg-date-display">...</span>
+                            <button class="icon-btn" onclick="location.href='error.html'" aria-label="Settings" style="margin-left: 15px;"><i class="fa-solid fa-gear"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="msg-view-body">
+                        <h4 id="view-msg-subject">Subject: ...</h4>
+                        <div id="view-msg-body" class="msg-body-content"></div>
+                    </div>
+                    
+                    <form action="./error.html" method="GET" class="msg-reply-box">
+                        <label for="reply-message" class="reply-label">Your Reply</label>
+                        <textarea id="reply-message" name="reply-message" placeholder="Type your response here..." class="dash-input" required></textarea>
+                        <button type="submit" class="btn-dash send-btn"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Send Reply</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        /* --- 1. Theme Toggle Logic --- */
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        function updateThemeText() {
+            if (body.classList.contains('light-theme')) {
+                themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+            } else {
+                themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+            }
+        }
+        updateThemeText(); 
+        
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            if(body.classList.contains('light-theme')){
+                localStorage.setItem('stackly-theme', 'light');
+            } else {
+                localStorage.setItem('stackly-theme', 'dark');
+            }
+            updateThemeText();
+            updateChartColors(); 
+        });
+
+        /* --- 2. Tab Switching Logic --- */
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const dashSections = document.querySelectorAll('.dash-section');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                dashSections.forEach(s => s.classList.remove('active'));
+                
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        /* --- 3. Complete Candidate Data (Icons instead of images) --- */
+        const candidates = [
+            { 
+                id: 1, name: "Eleanor Davis", role: "Senior Product Designer", exp: "8+ Years", 
+                email: "e.davis@design.com", phone: "+1 (555) 012-3456", status: "Technical Review", 
+                match: 85, tSkill: 90, cFit: 80, step: 2, icon: "fa-user-tie", color1: "#6366F1", color2: "#4f46e5",
+                bio: "Passionate about creating human-centric digital experiences. Specialist in design systems and accessibility." 
+            },
+            { 
+                id: 2, name: "Michael Chang", role: "Cloud Architect", exp: "12+ Years", 
+                email: "m.chang@devmail.com", phone: "+1 (555) 098-7654", status: "Offer Accepted", 
+                match: 98, tSkill: 99, cFit: 95, step: 4, icon: "fa-user-astronaut", color1: "#10b981", color2: "#059669",
+                bio: "Expert in scalable AWS infrastructure and Kubernetes. 10 years of experience in high-traffic platforms." 
+            },
+            { 
+                id: 3, name: "Sarah Jenkins", role: "Data Scientist", exp: "5 Years", 
+                email: "s.jenkins@data.net", phone: "+1 (555) 432-1098", status: "Offer Phase", 
+                match: 92, tSkill: 95, cFit: 88, step: 3, icon: "fa-user-graduate", color1: "#f59e0b", color2: "#d97706",
+                bio: "Specializing in predictive modeling and NLP. PhD from Stanford. Avid open-source contributor." 
+            },
+            { 
+                id: 4, name: "Robert Johnson", role: "Backend Engineer", exp: "4 Years", 
+                email: "r.johnson@code.io", phone: "+1 (555) 111-2222", status: "Screening", 
+                match: 76, tSkill: 80, cFit: 70, step: 1, icon: "fa-user-secret", color1: "#ec4899", color2: "#be185d",
+                bio: "Go and Node.js backend developer. Passionate about microservices and clean code." 
+            },
+            { 
+                id: 5, name: "Amanda Lee", role: "UX Researcher", exp: "7 Years", 
+                email: "a.lee@ux.com", phone: "+1 (555) 333-4444", status: "First Interview", 
+                match: 88, tSkill: 85, cFit: 92, step: 2, icon: "fa-user-doctor", color1: "#8b5cf6", color2: "#7c3aed",
+                bio: "Dedicated to user advocacy. Extensive experience with A/B testing, user journey mapping, and qualitative research." 
+            },
+            { 
+                id: 6, name: "Tom Kelvin", role: "Frontend Dev", exp: "3 Years", 
+                email: "t.kelvin@web.org", phone: "+1 (555) 555-6666", status: "Applied", 
+                match: 82, tSkill: 85, cFit: 78, step: 0, icon: "fa-user-ninja", color1: "#38bdf8", color2: "#0284c7",
+                bio: "React and Vue specialist. Strong eye for UI details and animations." 
+            }
+        ];
+
+        const sidebarList = document.getElementById('sidebar-candidate-list');
+        const searchInput = document.getElementById('candidate-search');
+        let currentActiveId = 1;
+
+        function renderSidebar(filterText = '') {
+            if(!sidebarList) return;
+            sidebarList.innerHTML = '';
+            
+            const filtered = candidates.filter(c => 
+                c.name.toLowerCase().includes(filterText.toLowerCase()) || 
+                c.role.toLowerCase().includes(filterText.toLowerCase())
+            );
+
+            filtered.forEach(c => {
+                const item = document.createElement('div');
+                item.className = `candidate-item ${c.id === currentActiveId ? 'active-candidate' : ''}`;
+                item.innerHTML = `
+                    <div class="c-avatar-icon" style="background: linear-gradient(135deg, ${c.color1}, ${c.color2});">
+                        <i class="fa-solid ${c.icon}"></i>
+                    </div>
+                    <div class="c-info">
+                        <h4>${c.name}</h4>
+                        <span>${c.role}</span>
+                    </div>
+                `;
+                item.onclick = () => switchProfile(c.id);
+                sidebarList.appendChild(item);
+            });
+        }
+
+        function buildFlowGraph(stepIndex) {
+            const steps = ["Applied", "Screening", "Interview", "Offer", "Hired"];
+            const container = document.getElementById('app-flow-container');
+            if(!container) return;
+            
+            let html = '';
+            steps.forEach((step, idx) => {
+                let statusClass = idx < stepIndex ? 'done' : (idx === stepIndex ? 'current' : '');
+                let lineClass = idx < stepIndex ? 'active' : '';
+
+                html += `<div class="flow-step ${statusClass}">
+                            <div class="flow-dot"></div>
+                            <span>${step}</span>
+                         </div>`;
+                if(idx < steps.length - 1) {
+                    html += `<div class="flow-line ${lineClass}"></div>`;
+                }
+            });
+            container.innerHTML = html;
+        }
+
+        function switchProfile(id) {
+            currentActiveId = id;
+            const c = candidates.find(x => x.id === id);
+            if (!c) return;
+
+            const profileWidget = document.getElementById('active-profile-widget');
+            profileWidget.style.opacity = '0.5';
+
+            setTimeout(() => {
+                document.getElementById('bc-name').textContent = c.name;
+                
+                // Handle Icon Avatar in main view
+                const avatarContainer = document.getElementById('p-avatar-container');
+                avatarContainer.style.background = `linear-gradient(135deg, ${c.color1}, ${c.color2})`;
+                avatarContainer.innerHTML = `<i class="fa-solid ${c.icon}" style="font-size: 2.5rem; color: #fff;"></i>`;
+
+                document.getElementById('p-name').textContent = c.name;
+                document.getElementById('p-role').textContent = c.role;
+                document.getElementById('p-exp').textContent = c.exp;
+                document.getElementById('p-email').textContent = c.email;
+                document.getElementById('p-phone').textContent = c.phone;
+                document.getElementById('p-bio').textContent = c.bio;
+                
+                const statusBadge = document.getElementById('p-status');
+                statusBadge.textContent = c.status;
+                statusBadge.className = 'badge ' + (c.step >= 4 ? 'badge-completed' : (c.step > 1 ? 'badge-progress' : 'badge-pending'));
+
+                // Ring animation
+                document.getElementById('match-value').textContent = `${c.match}%`;
+                document.getElementById('match-ring').style.setProperty('--percentage', c.match);
+
+                // Sub skills
+                document.getElementById('skill-1-val').textContent = `${c.tSkill}%`;
+                document.getElementById('skill-1-fill').style.width = `${c.tSkill}%`;
+                document.getElementById('skill-2-val').textContent = `${c.cFit}%`;
+                document.getElementById('skill-2-fill').style.width = `${c.cFit}%`;
+                document.getElementById('skill-3-val').textContent = `${Math.min(100, c.tSkill + 5)}%`;
+                document.getElementById('skill-3-fill').style.width = `${Math.min(100, c.tSkill + 5)}%`;
+
+                buildFlowGraph(c.step);
+
+                profileWidget.style.opacity = '1';
+                renderSidebar(searchInput.value);
+            }, 200);
+        }
+
+        if(searchInput) {
+            searchInput.addEventListener('input', (e) => renderSidebar(e.target.value));
+        }
+
+        /* --- 4. Chart.js (Analytics Tab) --- */
+        let sourceChart, deptChart;
+
+        function initCharts() {
+            const ctxSource = document.getElementById('sourceRingChart');
+            const ctxDept = document.getElementById('deptChart');
+            if(!ctxSource || !ctxDept) return;
+
+            const isLight = document.body.classList.contains('light-theme');
+            const textColor = isLight ? '#475569' : '#94a3b8';
+            const gridColor = isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+            const accentHex = '#6366F1';
+
+            // New Ring/Doughnut Chart
+            sourceChart = new Chart(ctxSource.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['LinkedIn', 'Direct Website', 'Referrals', 'Indeed'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [accentHex, '#38bdf8', '#10b981', '#f59e0b'],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    plugins: { legend: { position: 'right', labels: { color: textColor, font: { family: "'Outfit'" }, padding: 20 } } }
+                }
+            });
+
+            // Vertical Bar Chart
+            deptChart = new Chart(ctxDept.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Eng', 'Design', 'Mktg', 'Finance'],
+                    datasets: [{
+                        label: 'Applicants',
+                        data: [545, 312, 194, 85],
+                        backgroundColor: ['#38bdf8', accentHex, '#ec4899', '#10b981'],
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
+                },
+                options: { 
+                    responsive: true, 
+                    maintainAspectRatio: false, 
+                    plugins: { legend: { display: false } }, 
+                    scales: { 
+                        x: { ticks: { color: textColor }, grid: { display: false } }, 
+                        y: { ticks: { color: textColor }, grid: { color: gridColor } } 
+                    } 
+                }
+            });
+        }
+
+        function updateChartColors() {
+            if(!sourceChart || !deptChart) return;
+            const isLight = document.body.classList.contains('light-theme');
+            const textColor = isLight ? '#475569' : '#94a3b8';
+            const gridColor = isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+
+            sourceChart.options.plugins.legend.labels.color = textColor;
+            sourceChart.update();
+
+            deptChart.options.scales.x.ticks.color = textColor;
+            deptChart.options.scales.y.ticks.color = textColor;
+            deptChart.options.scales.y.grid.color = gridColor;
+            deptChart.update();
+        }
+
+        window.addEventListener('load', initCharts);
+
+        /* --- 5. Messaging System (Exactly 3 Elements) --- */
+        const messagesData = [
+            { 
+                id: 1, name: "Robert Sterling", email: "rob.sterling@corp.com", date: "10:45 AM", 
+                subject: "Re: VP of Marketing Offer Details", unread: true, 
+                body: "<p>Hi Stackly Recruiting,</p><p>Thank you so much for the offer for the VP of Marketing role. I am thrilled about the opportunity to join the team.</p><p>Before signing, I wanted to quickly confirm the details regarding the relocation package discussed during the final round. Can we set up a quick 5-minute call today?</p><p>Best regards,<br>Robert</p>" 
+            },
+            { 
+                id: 2, name: "Elena Rodriguez", email: "elena.r@design.co", date: "Yesterday", 
+                subject: "Take-home Assignment Submission", unread: true, 
+                body: "<p>Hello,</p><p>I have completed the UX Research take-home assignment for the Senior UX position. You can find the PDF attached to this email, along with the link to the Figma prototype.</p><p>Looking forward to your feedback and the next steps in the process.</p><p>Best,<br>Elena</p>" 
+            },
+            { 
+                id: 3, name: "David Kim", email: "david.k88@mail.com", date: "Oct 12", 
+                subject: "Feedback Request - Backend Engineer", unread: false, 
+                body: "<p>Hi Team,</p><p>Thank you for letting me know about the decision. While I'm disappointed not to be moving forward, I greatly appreciated the conversation with the engineering managers.</p><p>If possible, I would love to receive any technical feedback from my code review session to help me improve for the future.</p><p>Thanks,<br>David</p>" 
+            }
+        ];
+
+        function renderInbox() {
+            const container = document.getElementById('message-list-container');
+            if(!container) return;
+            container.innerHTML = '';
+            messagesData.forEach(msg => {
+                const div = document.createElement('div');
+                div.className = `msg-item ${msg.unread ? 'unread' : ''}`;
+                div.innerHTML = `<div class="msg-header"><h4>${msg.name}</h4><span>${msg.date}</span></div><p class="msg-subject">${msg.subject}</p><p class="msg-preview">Click to view full message...</p>`;
+                div.onclick = () => {
+                    // Visual active state update
+                    document.querySelectorAll('.msg-item').forEach(el => el.classList.remove('active-msg'));
+                    div.classList.add('active-msg');
+                    div.classList.remove('unread');
+                    
+                    document.getElementById('view-msg-name').textContent = msg.name;
+                    document.getElementById('view-msg-email').textContent = msg.email;
+                    document.getElementById('view-msg-date').textContent = msg.date;
+                    document.getElementById('view-msg-subject').textContent = `Subject: ${msg.subject}`;
+                    document.getElementById('view-msg-body').innerHTML = msg.body;
+                };
+                container.appendChild(div);
+            });
+            // Auto click first
+            if(container.firstChild) container.firstChild.click();
+        }
+
+        // Initialize Everything
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSidebar();
+            switchProfile(1);
+            renderInbox();
+        });
+    </script>
+</body>
+</html>

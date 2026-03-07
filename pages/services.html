@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Premium Career Services</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="loader-img">
+            <p>Loading Services...</p>
+        </div>
+    </div>
+
+    <header class="headerWrap" id="main-header">
+        <div class="imgWrap">
+            <a href="../index.html">
+                <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="site-logo">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="linksWrap" id="nav-links">
+            <div class="topCloseBtn" id="close-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <ul>
+                <li class="dropdown" id="home-dropdown">
+                    <div class="dropdownHeader">
+                        <a href="javascript:void(0)" class="homePageLink" id="home-nav-link">Home</a>
+                        <button class="dropdownToggle" aria-label="Toggle dropdown" id="dropdown-toggle-btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdownMenu" id="dropdown-menu">
+                        <li><a href="../index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="dashboard.html">DashBoard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="theme-toggle-li">
+                    <button id="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-sun" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menuOverlay" id="menu-overlay"></div>
+    </header>
+
+    <main>
+        <section class="services-hero fade-in">
+            <div class="video-bg-container">
+                <video src="../assets/Services/small-vecteezy_compass-with-the-text-career-right-path-concept-video-for_1617592_small (1).mp4" autoplay muted loop playsinline class="bg-video"></video>
+                <div class="overlay-dark"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <div class="hero-left fade-in-up">
+                    <div class="floating-img-wrapper">
+                        <img src="../assets/Services/2151893432.webp" alt="Career Growth">
+                        <div class="floating-badge top-badge"><i class="fa-solid fa-rocket"></i> Fast Track</div>
+                        <div class="floating-badge bottom-badge"><i class="fa-solid fa-star"></i> Pro Services</div>
+                    </div>
+                </div>
+                <div class="hero-right fade-in-up" style="animation-delay: 0.2s;">
+                    <h1>Elevate Your <span class="text-gradient">Career Path</span></h1>
+                    <p>Unlock premium tools designed to bypass ATS systems, connect you with elite recruiters, and land you the job you truly deserve.</p>
+                    <div class="hero-btns">
+                        <button class="btn btn-glow" onclick="location.href='error.html'">Get Started <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></button>
+                        <button class="btn btn-outline" onclick="location.href='error.html'">View Plans</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section fade-in">
+            <div class="container">
+                <div class="resume-grid">
+                    
+                    <div class="performance-widget creative-widget">
+                        <h3>Profile Performance</h3>
+                        <p class="subtitle">See how recruiters view your profile.</p>
+                        
+                        <div class="perf-stats">
+                            <div class="perf-circle">
+                                <div class="css-ring" style="--percentage: 78;">
+                                    <div class="ring-inner">
+                                        <span class="ring-value">78%</span>
+                                        <span class="ring-label">Profile Strength</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="perf-bars">
+                                <div class="bar-item">
+                                    <div class="bar-info"><span>Search Appearances</span><span>85/100</span></div>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 85%; background: var(--accent-color);"></div></div>
+                                </div>
+                                <div class="bar-item">
+                                    <div class="bar-info"><span>Recruiter Actions</span><span>42/100</span></div>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 42%; background: #38bdf8;"></div></div>
+                                </div>
+                                <div class="bar-item">
+                                    <div class="bar-info"><span>Resume ATS Score</span><span>60/100</span></div>
+                                    <div class="bar-track"><div class="bar-fill" style="width: 60%; background: #f59e0b;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload-widget creative-widget">
+                        <h3>Upload & Build Resume</h3>
+                        <p class="subtitle">Let our AI parse your details for the perfect match.</p>
+                        
+                        <form id="resume-form" novalidate>
+                            <div class="form-group">
+                                <label for="r-name">Full Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" id="r-name" name="r-name" placeholder="John Doe" required>
+                                </div>
+                                <span class="error-msg" id="err-name"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="r-email">Email Address <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" id="r-email" name="r-email" placeholder="career@example.com" required>
+                                </div>
+                                <span class="error-msg" id="err-email"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="r-area">Specialization Area <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <select id="r-area" name="r-area" class="custom-select" required>
+                                        <option value="" disabled selected>Select your field</option>
+                                        <option value="engineering">Software Engineering</option>
+                                        <option value="design">UI/UX Design</option>
+                                        <option value="finance">Finance & Accounting</option>
+                                        <option value="marketing">Marketing & Sales</option>
+                                        <option value="government">Government & Public Sector</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg" id="err-area"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="r-file">Upload CV (PDF/DOCX) <span class="required">*</span></label>
+                                <div class="file-upload-wrapper">
+                                    <input type="file" id="r-file" name="r-file" accept=".pdf,.doc,.docx" required>
+                                    <div class="file-dummy">
+                                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                                        <span id="file-name-display">Drag & drop or click to upload</span>
+                                    </div>
+                                </div>
+                                <span class="error-msg" id="err-file"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-glow full-width mt-2">Analyze & Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-jobs-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <span class="sub-badge">New Job Offers</span>
+                    <h2>Latest Opportunities</h2>
+                    <p>More than +500 job offers posted everyday across elite sectors.</p>
+                </div>
+
+                <div class="jobs-grid">
+                    <div class="job-card creative-widget">
+                        <div class="co-img">
+                            <img src="../assets/Home1/Grid/19.webp" alt="Gov Analyst">
+                        </div>
+                        <div class="job-card-top">
+                            <span class="job-tag gov-tag">Government</span>
+                        </div>
+                        <h1>Senior Infrastructure Analyst</h1>
+                        <p class="co-name">Federal Reserve Bank</p>
+                        <div class="job-meta">
+                            <span><i class="fa-solid fa-location-dot"></i> Washington, DC</span>
+                            <span><i class="fa-solid fa-briefcase"></i> Full-Time</span>
+                        </div>
+                        <button class="btn btn-outline full-width" onclick="location.href='error.html'">Apply Now</button>
+                    </div>
+
+                    <div class="job-card creative-widget">
+                        <div class="co-img">
+                            <img src="../assets/Home1/Grid/3.webp" alt="React Developer">
+                        </div>
+                        <div class="job-card-top">
+                            <span class="job-tag private-tag">Private</span>
+                        </div>
+                        <h1>Lead React Developer</h1>
+                        <p class="co-name">TechFlow Solutions</p>
+                        <div class="job-meta">
+                            <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                            <span><i class="fa-solid fa-briefcase"></i> Full-Time</span>
+                        </div>
+                        <button class="btn btn-outline full-width" onclick="location.href='error.html'">Apply Now</button>
+                    </div>
+
+                    <div class="job-card creative-widget">
+                        <div class="co-img">
+                            <img src="../assets/Home1/Grid/17.webp" alt="UI/UX Designer">
+                        </div>
+                        <div class="job-card-top">
+                            <span class="job-tag contract-tag">Contract</span>
+                        </div>
+                        <h1>Freelance UI/UX Designer</h1>
+                        <p class="co-name">Creative Studio X</p>
+                        <div class="job-meta">
+                            <span><i class="fa-solid fa-location-dot"></i> New York (Hybrid)</span>
+                            <span><i class="fa-solid fa-clock"></i> 6 Months</span>
+                        </div>
+                        <button class="btn btn-outline full-width" onclick="location.href='error.html'">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="center-aligned" style="margin-top: 40px;">
+                    <button class="btn btn-glow" onclick="location.href='error.html'"><i class="fa-solid fa-spinner"></i> Load More Jobs</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section fade-in">
+            <div class="video-bg-container">
+                <video src="../assets/Services/small-vecteezy_coins-stack-increase-with-business-data-hologram-business_11432639_small (1).mp4" autoplay muted loop playsinline class="bg-video"></video>
+                <div class="overlay-dark"></div>
+            </div>
+            <div class="container content-relative">
+                <div class="section-header center-aligned">
+                    <h2>Accelerate Your Career</h2>
+                    <p>Unlock priority applications and professional resume building services.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-card creative-widget">
+                        <h3>Resume Builder</h3>
+                        <div class="price"><span>$</span>29<span class="period">/one-time</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check"></i> ATS-Friendly Templates</li>
+                            <li><i class="fa-solid fa-check"></i> AI Keyword Optimization</li>
+                            <li><i class="fa-solid fa-check"></i> Cover Letter Builder</li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> Priority Application</li>
+                        </ul>
+                        <button class="btn btn-outline full-width" onclick="location.href='error.html'">Select Plan</button>
+                    </div>
+
+                    <div class="price-card pro-card creative-widget">
+                        <div class="popular-ribbon">Most Popular</div>
+                        <h3>Stackly Pro <span class="discount">-20% Off</span></h3>
+                        <div class="price"><span>$</span>14<span class="period">/month</span></div>
+                        <p class="billed-txt">Billed $168 annually (12 Months)</p>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check"></i> <strong>Priority Applicant Badge</strong></li>
+                            <li><i class="fa-solid fa-check"></i> Direct Recruiter Messaging</li>
+                            <li><i class="fa-solid fa-check"></i> Advanced Salary Insights</li>
+                            <li><i class="fa-solid fa-check"></i> AI Resume Builder Included</li>
+                        </ul>
+                        <button class="btn btn-glow full-width" onclick="location.href='error.html'">Go Pro</button>
+                    </div>
+
+                    <div class="price-card creative-widget">
+                        <h3>Career Booster</h3>
+                        <div class="price"><span>$</span>49<span class="period">/3 months</span></div>
+                        <ul class="features">
+                            <li><i class="fa-solid fa-check"></i> Short-term Priority Badge</li>
+                            <li><i class="fa-solid fa-check"></i> Highlighted Profile</li>
+                            <li><i class="fa-solid fa-check"></i> Interview Prep Guide</li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> Direct Messaging</li>
+                        </ul>
+                        <button class="btn btn-outline full-width" onclick="location.href='error.html'">Select Plan</button>
+                    </div>
+                </div>
+
+                <div class="feedback-widget creative-widget">
+                    <h4>Are you finding this website useful?</h4>
+                    <div class="feedback-btns">
+                        <button class="f-btn" onclick="location.href='error.html'" aria-label="Thumbs Up"><i class="fa-regular fa-thumbs-up"></i> Yes</button>
+                        <button class="f-btn" onclick="location.href='error.html'" aria-label="Thumbs Down"><i class="fa-regular fa-thumbs-down"></i> No</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about Stackly services.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>How does the Priority Applicant badge work?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                When you apply for a job with Stackly Pro, your application is pushed to the top of the recruiter's ATS dashboard, increasing your visibility by up to 300%.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Can I cancel my subscription at any time?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Yes, all Stackly plans auto-renew but can be canceled at any time from your account settings without any hidden cancellation fees.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Is the AI Resume Builder ATS compliant?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Absolutely. Our resume builder uses strict single-column architecture and standard fonts guaranteed to be parsed correctly by Workday, Greenhouse, and Lever.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Are Government jobs verified?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Yes, all listings carrying the "Government" badge are authenticated through official state or federal employment API feeds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Do you offer refunds?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                We offer a 14-day money-back guarantee on all our Pro plans if you are not completely satisfied with the features provided.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>How often are job listings updated?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Our platform synchronizes with corporate career portals and recruiter dashboards every hour to ensure you have access to the freshest opportunities.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Can I use Stackly Pro for multiple resumes?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Yes! You can generate and store up to 5 unique tailored resumes under the Pro plan to target different niches.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item creative-widget">
+                        <div class="faq-header">
+                            <h4>Is my personal data secure?</h4>
+                            <i class="fa-solid fa-plus faq-icon"></i>
+                        </div>
+                        <div class="faq-body">
+                            <div class="faq-body-inner">
+                                Your data privacy is our priority. We use end-to-end encryption and never sell your information to third-party data brokers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerWrap container">
+            <div class="box">
+                <div class="logoContainer">
+                    <div class="logo">
+                        <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="footer-logo site-logo">
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Defining the future of recruitment with precision, passion, and unparalleled expertise. We are
+                    committed to connecting elite talent with top-tier companies.
+                </p>
+            </div>
+
+            <div class="box">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="error.html">Job Search</a></li>
+                    <li><a href="error.html">Resume Builder</a></li>
+                    <li><a href="error.html">Career Advice</a></li>
+                    <li><a href="error.html">Employer Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Contact</h4>
+                <ul class="contactInfo">
+                    <li><i class="fa-solid fa-location-dot"></i><span> Bangalore, IN</span></li>
+                    <li><i class="fa-solid fa-phone"></i> +91 1800 555 0199</li>
+                    <li><i class="fa-solid fa-envelope"></i> careers@stackly.com</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Newsletter</h4>
+                <p>Join our exclusive mailing list for updates.</p>
+                <form id="footer-newsletter-form" class="subscribe-form" novalidate>
+                    <input type="email" id="footer-email" name="footer-email" placeholder="Your Email"
+                        autocomplete="email">
+                    <span id="newsletter-error"
+                        style="color: var(--text-main); font-size: 0.8rem; display: block; margin-top: -5px; min-height: 15px;"></span>
+                    <button type="submit" class="btn btn-glow full-width">Subscribe</button>
+                </form>
+                <div class="media">
+                    <a href="error.html" class="socialLink" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 300);
+                }
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript') && !href.startsWith('http')) {
+                    e.preventDefault();
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const dropdownToggleBtn = document.getElementById('dropdown-toggle-btn');
+        const homeNavLink = document.getElementById('home-nav-link');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const body = document.body;
+
+        function openMenu() {
+            navLinks.classList.add('showMenu');
+            menuOverlay.style.display = 'block';
+            body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('showMenu');
+            menuOverlay.style.display = 'none';
+            body.classList.remove('menu-open');
+            dropdownMenu.classList.remove('showDropdown');
+        }
+
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navLinks.classList.contains('showMenu')) { closeMenu(); }
+            else { openMenu(); }
+        });
+
+        closeBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('showMenu') && !navLinks.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        dropdownToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('showDropdown');
+        });
+
+        homeNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('showDropdown');
+            }
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('stackly-theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('stackly-theme', 'dark');
+            }
+        });
+
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { header.classList.add('sticky'); }
+            else { header.classList.remove('sticky'); }
+        });
+
+        const fadeElems = document.querySelectorAll('.fade-in, .fade-in-up');
+        const fadeInObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElems.forEach(elem => fadeInObserver.observe(elem));
+
+        const rForm = document.getElementById('resume-form');
+        const rName = document.getElementById('r-name');
+        const rEmail = document.getElementById('r-email');
+        const rArea = document.getElementById('r-area');
+        const rFile = document.getElementById('r-file');
+        
+        const fileDisplay = document.getElementById('file-name-display');
+
+        if(rName){
+            rName.addEventListener('input', function() {
+                this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+            });
+        }
+
+        if(rFile){
+            rFile.addEventListener('change', function() {
+                if(this.files && this.files.length > 0) {
+                    fileDisplay.textContent = this.files[0].name;
+                    fileDisplay.style.color = 'var(--accent-color)';
+                } else {
+                    fileDisplay.textContent = 'Drag & drop or click to upload';
+                    fileDisplay.style.color = '';
+                }
+            });
+        }
+
+        const isValidEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        const showError = (input, spanId, msg) => {
+            document.getElementById(spanId).textContent = msg;
+            input.parentElement.classList.add('error-border');
+        };
+        const clearErrors = () => {
+            document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
+            document.querySelectorAll('.input-wrapper, .file-upload-wrapper').forEach(el => el.classList.remove('error-border'));
+        };
+
+        if(rForm){
+            rForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                clearErrors();
+                let valid = true;
+
+                if (rName.value.trim() === '') { showError(rName, 'err-name', 'Name is required'); valid = false; }
+                if (rEmail.value.trim() === '') { showError(rEmail, 'err-email', 'Email is required'); valid = false; }
+                else if (!isValidEmail(rEmail.value.trim())) { showError(rEmail, 'err-email', 'Valid email required'); valid = false; }
+                if (rArea.value === '') { showError(rArea, 'err-area', 'Area selection is required'); valid = false; }
+                if (rFile.value === '') { showError(rFile, 'err-file', 'Resume file is required'); valid = false; }
+
+                if(valid) {
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = 'error.html'; }, 400);
+                }
+            });
+        }
+
+        const footerForm = document.getElementById('footer-newsletter-form');
+        const newsletterEmail = document.getElementById('footer-email');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        const isValidNewsletterEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        if(footerForm){
+            footerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                newsletterError.innerText = '';
+                newsletterEmail.style.borderColor = '';
+
+                if (newsletterEmail.value.trim() === '') {
+                    newsletterError.innerText = 'Email is required';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else if (!isValidNewsletterEmail(newsletterEmail.value.trim())) {
+                    newsletterError.innerText = 'Please enter a valid email address';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else {
+                    alert("Successfully subscribed to the newsletter!");
+                    newsletterEmail.value = '';
+                }
+            });
+        }
+
+        const faqHeaders = document.querySelectorAll('.faq-header');
+        faqHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const body = header.nextElementSibling;
+                
+                const activeItem = document.querySelector('.faq-item.active');
+                if (activeItem && activeItem !== item) {
+                    activeItem.classList.remove('active');
+                    activeItem.querySelector('.faq-body').style.maxHeight = null;
+                }
+                
+                item.classList.toggle('active');
+                if (item.classList.contains('active')) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                } else {
+                    body.style.maxHeight = null;
+                }
+            });
+        });
+
+        const scrollTopBtnElement = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { scrollTopBtnElement.classList.add("show"); } 
+            else { scrollTopBtnElement.classList.remove("show"); }
+        });
+        scrollTopBtnElement.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+    </script>
+</body>
+</html>

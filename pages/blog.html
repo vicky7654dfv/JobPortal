@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Career Blog & Insights</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="loader-img">
+            <p>Loading Insights...</p>
+        </div>
+    </div>
+
+    <div class="page-bg">
+        <video src="../assets/Blog/blogBg.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay-gradient"></div>
+        <!-- Context Animations (Floating Orbs) -->
+        <div class="context-orb orb-1"></div>
+        <div class="context-orb orb-2"></div>
+        <div class="context-orb orb-3"></div>
+    </div>
+
+    <header class="headerWrap" id="main-header">
+        <div class="imgWrap">
+            <a href="index.html">
+                <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="site-logo">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="linksWrap" id="nav-links">
+            <div class="topCloseBtn" id="close-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <ul>
+                <li class="dropdown" id="home-dropdown">
+                    <div class="dropdownHeader">
+                        <a href="javascript:void(0)" class="homePageLink" id="home-nav-link">Home</a>
+                        <button class="dropdownToggle" aria-label="Toggle dropdown" id="dropdown-toggle-btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdownMenu" id="dropdown-menu">
+                        <li><a href="../index.html">Home 1</a></li>
+                        <li><a href="./home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./dashboard.html">DashBoard</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./signup.html">Sign Up</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li class="theme-toggle-li">
+                    <button id="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-sun" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menuOverlay" id="menu-overlay"></div>
+    </header>
+
+    <main class="blog-main">
+
+        <section class="blog-controls-section fade-in">
+            <div class="container center-aligned content-relative">
+                <div class="blog-heading">
+                    <h1 class="page-title">Career <span class="text-gradient">Insights</span></h1>
+                    <p>Expert advice, industry trends, and interview hacks to elevate your career.</p>
+                </div>
+
+                <div class="search-filter-wrapper">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="blog-search" placeholder="Search articles by title...">
+                    </div>
+
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="interviews">Interviews</button>
+                        <button class="filter-btn" data-filter="resume">Resumes</button>
+                        <button class="filter-btn" data-filter="career">Career Growth</button>
+                        <button class="filter-btn" data-filter="tech">Tech Trends</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-grid-section fade-in-up">
+            <div class="container content-relative">
+                <div class="articles-grid" id="articles-container">
+
+                    <div class="blog-card" data-category="interviews" data-title="5 Tips to Ace Your Tech Interview">
+                        <div class="card-category">Interviews</div>
+                        <h1 class="card-title">5 Tips to Ace Your Tech Interview</h1>
+                        <p class="card-excerpt">Discover the top strategies for technical screenings. <a
+                                href="error.html" class="inline-link">Read the full guide here...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="resume" data-title="How to Write a Winning Resume in 2026">
+                        <div class="card-category">Resumes</div>
+                        <h1 class="card-title">How to Write a Winning Resume in 2026</h1>
+                        <p class="card-excerpt">Learn how to beat the ATS systems with modern layouts. <a
+                                href="error.html" class="inline-link">Download our templates...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="tech" data-title="The Future of AI in Software Engineering">
+                        <div class="card-category">Tech Trends</div>
+                        <h1 class="card-title">The Future of AI in Software Engineering</h1>
+                        <p class="card-excerpt">Is AI replacing coders or making them faster? <a href="error.html"
+                                class="inline-link">Explore the data...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="career" data-title="Mastering Salary Negotiation">
+                        <div class="card-category">Career Growth</div>
+                        <h1 class="card-title">Mastering Salary Negotiation</h1>
+                        <p class="card-excerpt">Never leave money on the table again with these proven scripts. <a
+                                href="error.html" class="inline-link">Get the scripts...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="career" data-title="Remote Work Best Practices">
+                        <div class="card-category">Career Growth</div>
+                        <h1 class="card-title">Remote Work Best Practices</h1>
+                        <p class="card-excerpt">How to stay productive and visible when working from home. <a
+                                href="error.html" class="inline-link">Learn the habits...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="tech" data-title="Top 10 JavaScript Frameworks">
+                        <div class="card-category">Tech Trends</div>
+                        <h1 class="card-title">Top 10 JavaScript Frameworks</h1>
+                        <p class="card-excerpt">Which JS framework should you learn to maximize your salary? <a
+                                href="error.html" class="inline-link">See the rankings...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="interviews" data-title="How to Dress for Zoom Interviews">
+                        <div class="card-category">Interviews</div>
+                        <h1 class="card-title">How to Dress for Zoom Interviews</h1>
+                        <p class="card-excerpt">First impressions still matter. Tips for camera-ready aesthetics. <a
+                                href="error.html" class="inline-link">View the checklist...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="resume" data-title="Powerful Action Verbs for Your CV">
+                        <div class="card-category">Resumes</div>
+                        <h1 class="card-title">Powerful Action Verbs for Your CV</h1>
+                        <p class="card-excerpt">Stop saying "managed" and start using these high-impact words. <a
+                                href="error.html" class="inline-link">See the vocabulary list...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="career" data-title="Upskilling in 2026: Where to Focus">
+                        <div class="card-category">Career Growth</div>
+                        <h1 class="card-title">Upskilling in 2026: Where to Focus</h1>
+                        <p class="card-excerpt">The most demanded skills by top tech recruiters this year. <a
+                                href="error.html" class="inline-link">Start learning...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="tech" data-title="Cybersecurity Roles Explained">
+                        <div class="card-category">Tech Trends</div>
+                        <h1 class="card-title">Cybersecurity Roles Explained</h1>
+                        <p class="card-excerpt">Breaking down InfoSec careers from Blue Team to Red Team. <a
+                                href="error.html" class="inline-link">Find your niche...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="interviews" data-title="Answering 'Tell me about yourself'">
+                        <div class="card-category">Interviews</div>
+                        <h1 class="card-title">Answering 'Tell me about yourself'</h1>
+                        <p class="card-excerpt">The perfect formula to answer the most common interview question. <a
+                                href="error.html" class="inline-link">Read the framework...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="resume" data-title="ATS Resume Formatting Mistakes">
+                        <div class="card-category">Resumes</div>
+                        <h1 class="card-title">ATS Resume Formatting Mistakes</h1>
+                        <p class="card-excerpt">Are hidden formatting issues getting your resume rejected? <a
+                                href="error.html" class="inline-link">Audit your CV...</a></p>
+                        <div class="card-actions">
+                            <button onclick="window.location.href='error.html'" class="btn btn-outline btn-sm">Read
+                                More</button>
+                            <button onclick="window.location.href='error.html'" class="btn btn-icon btn-sm"
+                                aria-label="Bookmark"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No Matches Message -->
+                <div id="no-matches-msg" class="no-matches-message" style="display: none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>No Articles Found</h3>
+                    <p>We couldn't find any deep dives matching your criteria. Try adjusting your search term or
+                        category filter.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-posts-section fade-in">
+            <div class="container content-relative">
+                <div class="section-divider deep-dives-header">
+                    <h2>Featured Deep Dives</h2>
+                    <div class="header-actions fade-in-up">
+                        <a href="error.html" class="gsap-link-text">Browse all articles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <button onclick="window.location.href='error.html'" class="btn-gsap">
+                            <span class="gsap-text">Subscribe</span>
+                            <span class="gsap-glow"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="detailed-posts-container">
+
+                    <article class="detailed-post">
+                        <div class="post-img-wrapper">
+                            <img src="../assets/Blog/1.webp" alt="Interview Strategy" loading="lazy">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Mar 10, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 8 Min Read</span>
+                            </div>
+                            <h2>The Ultimate Guide to Tech Interviews at FAANG</h2>
+                            <p>Preparing for an interview at a top-tier tech company requires more than just coding
+                                skills. You need a solid grasp of system design, behavioral principles, and algorithmic
+                                problem-solving under extreme pressure. In this comprehensive guide, we sit down with
+                                former hiring managers to uncover what actually happens behind closed doors.</p>
+                            <a href="error.html" class="btn btn-glow">Read Full Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="detailed-post reverse">
+                        <div class="post-img-wrapper">
+                            <img src="../assets/Blog/2.webp" alt="Salary Negotiation" loading="lazy">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Mar 05, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 Min Read</span>
+                            </div>
+                            <h2>The Psychology of Salary Negotiation</h2>
+                            <p>Most candidates accept the first offer they receive out of fear of losing the
+                                opportunity. However, recruiters expect you to negotiate. Discover the psychological
+                                anchors you can use to frame your value, and learn exact email templates to
+                                counter-offer professionally without seeming demanding.</p>
+                            <a href="error.html" class="btn btn-glow">Read Full Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="detailed-post">
+                        <div class="post-img-wrapper">
+                            <img src="../assets/Blog/3.webp" alt="Design Portfolio" loading="lazy">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Feb 28, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 Min Read</span>
+                            </div>
+                            <h2>Building a Portfolio that Stops Recruiters Scrolling</h2>
+                            <p>Your portfolio is your digital handshake. If it's cluttered, slow, or confusing,
+                                recruiters will bounce in under 7 seconds. We break down the anatomy of a perfect case
+                                study, showing you how to highlight your impact, ROI, and process rather than just
+                                beautiful end-results.</p>
+                            <a href="error.html" class="btn btn-glow">Read Full Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="detailed-post reverse">
+                        <div class="post-img-wrapper">
+                            <img src="../assets/Blog/4.webp" alt="Remote Working" loading="lazy">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Feb 20, 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 7 Min Read</span>
+                            </div>
+                            <h2>Navigating the Global Remote Job Market</h2>
+                            <p>Remote work has erased geographical borders, meaning you are now competing against global
+                                talent. How do you stand out? We explore asynchronous communication skills, mastering
+                                time-zone management, and optimizing your LinkedIn to attract international remote-first
+                                employers.</p>
+                            <a href="error.html" class="btn btn-glow">Read Full Story <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerWrap container">
+            <div class="box">
+                <div class="logoContainer">
+                    <div class="logo">
+                        <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="footer-logo site-logo">
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Defining the future of recruitment with precision, passion, and unparalleled expertise. We are
+                    committed to connecting elite talent with top-tier companies.
+                </p>
+            </div>
+
+            <div class="box">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="./home2.html">Home 2</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="./error.html">Job Search</a></li>
+                    <li><a href="./error.html">Resume Builder</a></li>
+                    <li><a href="./error.html">Career Advice</a></li>
+                    <li><a href="./error.html">Employer Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Contact</h4>
+                <ul class="contactInfo">
+                    <li><i class="fa-solid fa-location-dot"></i><span> Bangalore, IN</span></li>
+                    <li><i class="fa-solid fa-phone"></i> +91 1800 555 0199</li>
+                    <li><i class="fa-solid fa-envelope"></i> careers@stackly.com</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Newsletter</h4>
+                <p>Join our exclusive mailing list for updates.</p>
+                <form id="footer-newsletter-form" class="subscribe-form" novalidate>
+                    <input type="email" id="footer-email" name="footer-email" placeholder="Your Email"
+                        autocomplete="email">
+                    <span id="newsletter-error"
+                        style="color: var(--error-color); font-size: 0.8rem; display: block; margin-top: -5px; min-height: 15px;"></span>
+                    <button type="submit" class="btn btn-glow full-width">Subscribe</button>
+                </form>
+                <div class="media">
+                    <a href="./error.html" class="socialLink" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="./error.html" class="socialLink" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="./error.html" class="socialLink" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./error.html" class="socialLink" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // Base Page Logic (Loader, Transitions)
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 300);
+                }
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript')) {
+                    e.preventDefault();
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+
+        // Navigation Logic
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const dropdownToggleBtn = document.getElementById('dropdown-toggle-btn');
+        const homeNavLink = document.getElementById('home-nav-link');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const body = document.body;
+
+        function openMenu() {
+            navLinks.classList.add('showMenu');
+            menuOverlay.style.display = 'block';
+            body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('showMenu');
+            menuOverlay.style.display = 'none';
+            body.classList.remove('menu-open');
+            dropdownMenu.classList.remove('showDropdown');
+        }
+
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navLinks.classList.contains('showMenu')) { closeMenu(); }
+            else { openMenu(); }
+        });
+
+        closeBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('showMenu') && !navLinks.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        dropdownToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('showDropdown');
+        });
+
+        homeNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('showDropdown');
+            }
+        });
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('stackly-theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('stackly-theme', 'dark');
+            }
+        });
+
+        // Header Scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { header.classList.add('sticky'); }
+            else { header.classList.remove('sticky'); }
+        });
+
+        // Fade Animations
+        const fadeElems = document.querySelectorAll('.fade-in, .fade-in-up');
+        const fadeInObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElems.forEach(elem => fadeInObserver.observe(elem));
+
+        // Form Validation (Footer)
+        const footerForm = document.getElementById('footer-newsletter-form');
+        const newsletterEmail = document.getElementById('footer-email');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        const isValidEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        footerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            newsletterError.innerText = '';
+            newsletterEmail.style.borderColor = '';
+
+            if (newsletterEmail.value.trim() === '') {
+                newsletterError.innerText = 'Email is required';
+                newsletterEmail.style.borderColor = 'var(--error-color)';
+            } else if (!isValidEmail(newsletterEmail.value.trim())) {
+                newsletterError.innerText = 'Please enter a valid email address';
+                newsletterEmail.style.borderColor = 'var(--error-color)';
+            } else {
+                alert("Successfully subscribed to the newsletter!");
+                newsletterEmail.value = '';
+            }
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { scrollTopBtn.classList.add("show"); }
+            else { scrollTopBtn.classList.remove("show"); }
+        });
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // --- Blog Search & Filter Logic ---
+        const searchInput = document.getElementById('blog-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('.blog-card');
+
+        function filterArticles() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            let visibleCount = 0;
+
+            articles.forEach(article => {
+                const title = article.getAttribute('data-title').toLowerCase();
+                const category = article.getAttribute('data-category');
+
+                const matchesSearch = title.includes(searchTerm);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    article.style.display = 'flex';
+                    visibleCount++;
+                    // Re-trigger animation nicely
+                    article.style.animation = 'none';
+                    article.offsetHeight; /* trigger reflow */
+                    article.style.animation = null;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+
+            const noMatchesMsg = document.getElementById('no-matches-msg');
+            if (visibleCount === 0) {
+                noMatchesMsg.style.display = 'flex';
+            } else {
+                noMatchesMsg.style.display = 'none';
+            }
+        }
+
+        searchInput.addEventListener('input', filterArticles);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterArticles();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
