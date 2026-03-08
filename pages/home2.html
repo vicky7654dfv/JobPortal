@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Home Alternative</title>
+    <link rel="icon" type="image/webp" href="../assets/Home1/Header/logo.webp">
+    <link rel="stylesheet" href="../css/home2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <script>
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
+
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="loader-img">
+            <p>Loading Experience...</p>
+        </div>
+    </div>
+
+    <header class="headerWrap" id="main-header">
+        <div class="imgWrap">
+            <a href="../index.html">
+                <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="site-logo">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="linksWrap" id="nav-links">
+            <div class="topCloseBtn" id="close-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <ul>
+                <li class="dropdown" id="home-dropdown">
+                    <div class="dropdownHeader">
+                        <a href="javascript:void(0)" class="homePageLink" id="home-nav-link">Home</a>
+                        <button class="dropdownToggle" aria-label="Toggle dropdown" id="dropdown-toggle-btn">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdownMenu" id="dropdown-menu">
+                        <li><a href="../index.html">Home 1</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="dashboard.html">DashBoard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="theme-toggle-li">
+                    <button id="theme-toggle-btn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-sun" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menuOverlay" id="menu-overlay"></div>
+    </header>
+
+    <main>
+        <section class="h2-hero fade-in">
+            <div class="video-bg-container">
+                <video src="../assets/Home2/heroVideo.mp4" autoplay muted loop playsinline class="bg-video"></video>
+                <div class="overlay-dark"></div>
+            </div>
+            <div class="container h2-hero-grid content-relative">
+                <div class="h2-hero-left fade-in-up">
+                    <h1>Connecting Elite Talent with Visionary Enterprises</h1>
+                    <p>Step into an AI-powered ecosystem designed to dissolve recruitment barriers and accelerate your career trajectory.</p>
+                    <form class="search-form" onsubmit="event.preventDefault(); useNavigate('error.html');">
+                        <div class="input-group">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="h2-job-search" name="job-search" placeholder="Job title or company" required aria-label="Job title or company">
+                        </div>
+                        <div class="input-group">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" id="h2-job-location" name="job-location" placeholder="Location" aria-label="Location">
+                        </div>
+                        <div class="search-actions">
+                            <button type="submit" class="btn btn-glow">Find Jobs</button>
+                            <button type="button" class="btn btn-outline" onclick="useNavigate('error.html')">Hire Talent</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="h2-hero-right" style="animation-delay: 0.2s;">
+                    <div class="hero-image-wrapper">
+                        <img src="../assets/Home2/manFg.webp" alt="Global Talent">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="disc-section fade-in">
+            <div class="container">
+                <div class="disc-grid">
+                    <div class="disc-left">
+                        <div class="rotating-image-wrapper">
+                            <img src="../assets/Home2/spin.webp" alt="Recruitment Engine" class="rotating-image">
+                            <div class="glow-effect"></div>
+                        </div>
+                    </div>
+                    <div class="disc-right">
+                        <h1>Continuous Recruitment Cycle</h1>
+                        <p>Our AI-driven talent engine operates in a state of perpetual refinement. By analyzing real-time market shifts and candidate aspirations, we ensure that the bridge between elite talent and global opportunities never stops evolving.</p>
+                        <button class="btn btn-glow mt-2" onclick="useNavigate('error.html')">Unlock Momentum</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flip-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <h1>Scale With Precision</h1>
+                    <p>We bridge the gap between visionary companies and exceptional candidates from all around the world.</p>
+                    <div class="header-btns mt-2">
+                        <button class="btn btn-glow" onclick="useNavigate('error.html')">Join Ecosystem</button>
+                        <button class="btn btn-outline" onclick="useNavigate('error.html')">View Success Rates</button>
+                    </div>
+                </div>
+
+                <div class="flip-wrapper">
+                    <div class="flip-box">
+                        <div class="flip-face flip-front">
+                            <div class="flip-content-left">
+                                <span class="badge">For Job Seekers</span>
+                                <h3>Architect Your Future</h3>
+                                <p>Unlock personalized job matches, AI-driven resume scoring, and direct access to global hiring managers. Your next career milestone is just a flip away.</p>
+                                <button class="btn btn-glow" onclick="useNavigate('error.html')">Find Opportunity</button>
+                            </div>
+                            <div class="flip-content-right">
+                                <img src="../assets/Home1/Grid/17.webp" alt="Job Seeker Portfolio">
+                            </div>
+                        </div>
+                        
+                        <div class="flip-face flip-back">
+                            <div class="flip-content-left">
+                                <span class="badge">For Employers</span>
+                                <h3>Build Elite Teams</h3>
+                                <p>Reduce time-to-hire by 60% with our predictive matching engine. Connect with pre-vetted elite talent that fits your company's visionary goals.</p>
+                                <button class="btn btn-glow" onclick="useNavigate('error.html')">Employer Hub</button>
+                            </div>
+                            <div class="flip-content-right">
+                                <img src="../assets/Home1/Grid/8.webp" alt="Enterprise Talent Dashboard">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="marquee-section fade-in">
+            <div class="container">
+                <div class="section-header center-aligned">
+                    <h1>Global Industry Coverage</h1>
+                    <p>Connecting talent across every major vertical and discipline with specialized matching.</p>
+                    <div class="header-btns mt-2">
+                        <button class="btn btn-glow" onclick="useNavigate('error.html')">Browse Categories</button>
+                        <button class="btn btn-outline" onclick="useNavigate('error.html')">Explore Sectors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-track track-fast">
+                    <div class="marquee-content">
+                        <span>FinTech <i class="fa-solid fa-building-columns"></i></span>
+                        <span>Healthcare <i class="fa-solid fa-heart-pulse"></i></span>
+                        <span>E-commerce <i class="fa-solid fa-cart-shopping"></i></span>
+                        <span>AI & ML <i class="fa-solid fa-microchip"></i></span>
+                        <span>FinTech <i class="fa-solid fa-building-columns"></i></span>
+                        <span>Healthcare <i class="fa-solid fa-heart-pulse"></i></span>
+                        <span>E-commerce <i class="fa-solid fa-cart-shopping"></i></span>
+                        <span>AI & ML <i class="fa-solid fa-microchip"></i></span>
+                    </div>
+                </div>
+                <div class="marquee-track track-reverse track-slow">
+                    <div class="marquee-content">
+                        <span>SaaS <i class="fa-solid fa-cloud"></i></span>
+                        <span>Cybersecurity <i class="fa-solid fa-shield-halved"></i></span>
+                        <span>Blockchain <i class="fa-solid fa-link"></i></span>
+                        <span>Gaming <i class="fa-solid fa-gamepad"></i></span>
+                        <span>SaaS <i class="fa-solid fa-cloud"></i></span>
+                        <span>Cybersecurity <i class="fa-solid fa-shield-halved"></i></span>
+                        <span>Blockchain <i class="fa-solid fa-link"></i></span>
+                        <span>Gaming <i class="fa-solid fa-gamepad"></i></span>
+                    </div>
+                </div>
+                <div class="marquee-track track-medium">
+                    <div class="marquee-content">
+                        <span>Logistics <i class="fa-solid fa-truck-fast"></i></span>
+                        <span>EdTech <i class="fa-solid fa-graduation-cap"></i></span>
+                        <span>Real Estate <i class="fa-solid fa-house-chimney"></i></span>
+                        <span>Renewables <i class="fa-solid fa-sun-plant-wilt"></i></span>
+                        <span>Logistics <i class="fa-solid fa-truck-fast"></i></span>
+                        <span>EdTech <i class="fa-solid fa-graduation-cap"></i></span>
+                        <span>Real Estate <i class="fa-solid fa-house-chimney"></i></span>
+                        <span>Renewables <i class="fa-solid fa-sun-plant-wilt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shape-future-section fade-in">
+            <div class="shape-bg-overlay"></div>
+            <div class="container shape-content content-relative">
+                <div class="section-header center-aligned">
+                    <h1 style="color: #fff;">Shape Our Future Together</h1>
+                    <p style="color: #cbd5e1;">Your voice drives our innovation. Share your feedback or explore our elite matching tools.</p>
+                    <div class="header-btns mt-2">
+                        <button class="btn btn-glow" onclick="useNavigate('error.html')">View Roadmap</button>
+                        <button class="btn btn-outline" style="border-color: #fff; color: #1ab591;" onclick="useNavigate('error.html')">Platform Updates</button>
+                    </div>
+                </div>
+
+                <div class="shape-grid">
+                    <div class="feedback-col">
+                        <form class="feedback-form" onsubmit="event.preventDefault(); useNavigate('error.html');">
+                            <label for="user-feedback">User Feedback</label>
+                            <textarea id="user-feedback" name="user-feedback" placeholder="How can we improve your experience?" required></textarea>
+                            <button type="submit" class="btn btn-glow">Submit Feedback</button>
+                        </form>
+                    </div>
+                    <div class="tools-col">
+                        <div class="tool-card" onclick="useNavigate('error.html')">
+                            <i class="fa-solid fa-file-circle-plus"></i>
+                            <div>
+                                <h4>Add Resume</h4>
+                                <p>Instant AI analysis</p>
+                            </div>
+                        </div>
+                        <div class="tool-card" onclick="useNavigate('error.html')">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <div>
+                                <h4>Search for Job</h4>
+                                <p>Elite match filtering</p>
+                            </div>
+                        </div>
+                        <div class="tool-card" onclick="useNavigate('error.html')">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <div>
+                                <h4>Get ATS Score</h4>
+                                <p>Optimize your impact</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerWrap container">
+            <div class="box">
+                <div class="logoContainer">
+                    <div class="logo">
+                        <img src="../assets/Home1/Header/logo.webp" alt="Stackly Logo" class="footer-logo site-logo">
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    Defining the future of recruitment with precision, passion, and unparalleled expertise. We are
+                    committed to connecting elite talent with top-tier companies.
+                </p>
+            </div>
+
+            <div class="box">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="error.html">Job Search</a></li>
+                    <li><a href="error.html">Resume Builder</a></li>
+                    <li><a href="error.html">Career Advice</a></li>
+                    <li><a href="error.html">Employer Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Contact</h4>
+                <ul class="contactInfo">
+                    <li><i class="fa-solid fa-location-dot"></i><span> Bangalore, IN</span></li>
+                    <li><i class="fa-solid fa-phone"></i> +91 1800 555 0199</li>
+                    <li><i class="fa-solid fa-envelope"></i> careers@stackly.com</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h4>Newsletter</h4>
+                <p>Join our exclusive mailing list for updates.</p>
+                <form id="footer-newsletter-form" class="subscribe-form" novalidate>
+                    <input type="email" id="footer-email" name="footer-email" placeholder="Your Email"
+                        autocomplete="email">
+                    <span id="newsletter-error"
+                        style="color: var(--text-main); font-size: 0.8rem; display: block; margin-top: -5px; min-height: 15px;"></span>
+                    <button type="submit" class="btn btn-glow full-width">Subscribe</button>
+                </form>
+                <div class="media">
+                    <a href="error.html" class="socialLink" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="error.html" class="socialLink" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        function useNavigate(path) {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.style.display = 'flex';
+                setTimeout(() => { loader.style.opacity = '1'; }, 10);
+            }
+            setTimeout(() => {
+                window.location.href = path;
+            }, 400);
+        }
+
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 300);
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                const loader = document.getElementById('page-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 300);
+                }
+            }
+        });
+
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript') && !href.startsWith('http')) {
+                    e.preventDefault();
+                    const loader = document.getElementById('page-loader');
+                    loader.style.display = 'flex';
+                    setTimeout(() => { loader.style.opacity = '1'; }, 10);
+                    setTimeout(() => { window.location.href = href; }, 400);
+                }
+            });
+        });
+
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const dropdownToggleBtn = document.getElementById('dropdown-toggle-btn');
+        const homeNavLink = document.getElementById('home-nav-link');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const body = document.body;
+
+        function openMenu() {
+            navLinks.classList.add('showMenu');
+            menuOverlay.style.display = 'block';
+            body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('showMenu');
+            menuOverlay.style.display = 'none';
+            body.classList.remove('menu-open');
+            dropdownMenu.classList.remove('showDropdown');
+        }
+
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navLinks.classList.contains('showMenu')) { closeMenu(); }
+            else { openMenu(); }
+        });
+
+        closeBtn.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('showMenu') && !navLinks.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        dropdownToggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('showDropdown');
+        });
+
+        homeNavLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('showDropdown');
+            }
+        });
+
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const themeIcon = document.getElementById('theme-icon');
+
+        if (localStorage.getItem('stackly-theme') === 'light') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('stackly-theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('stackly-theme', 'dark');
+            }
+        });
+
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { header.classList.add('sticky'); }
+            else { header.classList.remove('sticky'); }
+        });
+
+        const fadeElems = document.querySelectorAll('.fade-in, .fade-in-up');
+        const fadeInObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElems.forEach(elem => fadeInObserver.observe(elem));
+
+        const footerForm = document.getElementById('footer-newsletter-form');
+        const newsletterEmail = document.getElementById('footer-email');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        const isValidNewsletterEmail = (email) => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        };
+
+        if(footerForm){
+            footerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                newsletterError.innerText = '';
+                newsletterEmail.style.borderColor = '';
+
+                if (newsletterEmail.value.trim() === '') {
+                    newsletterError.innerText = 'Email is required';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else if (!isValidNewsletterEmail(newsletterEmail.value.trim())) {
+                    newsletterError.innerText = 'Please enter a valid email address';
+                    newsletterEmail.style.borderColor = 'var(--text-main)';
+                } else {
+                    alert("Successfully subscribed to the newsletter!");
+                    newsletterEmail.value = '';
+                }
+            });
+        }
+
+        const scrollTopBtnElement = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) { scrollTopBtnElement.classList.add("show"); } 
+            else { scrollTopBtnElement.classList.remove("show"); }
+        });
+        scrollTopBtnElement.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
